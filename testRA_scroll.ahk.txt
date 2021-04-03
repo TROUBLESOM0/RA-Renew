@@ -1,0 +1,391 @@
+!r::
+
+WinGetActiveTitle, awin
+MsgBox, 0, Active Window is:  "%awin%"
+
+IfWinActive, Risk - Google Chrome
+{
+	WinMaximize
+	MsgBox Press OK to begin the process
+}
+else
+{	;WinWait, Risk - Google Chrome, , 60
+	MsgBox, 16, Get8Me, Must be in the RA form to continue, 20
+}
+	
+;CoordMode, Mouse, Screen
+
+;SetMouseDelay, 3000
+Click, 1646, 131 ;copy RA
+Sleep, 1500
+;MouseClick, Left
+
+Click, 1434, 322
+Sleep, 50
+
+; add Supervisor
+Click, 998, 385
+Sleep, 50
+Send, Joel Mahaffey
+Sleep, 50
+Click, 1247, 390
+Sleep, 50
+Click, 1177, 466
+Sleep, 50
+Click, 1284, 390
+Sleep, 50
+Send, Supervisor
+Sleep, 50
+Click, 1456, 390
+Sleep, 50
+Send, CI
+
+Sleep, 50
+Click, 1434, 322
+Sleep, 50
+
+; next Attendee
+Click, 998, 430
+Sleep, 50
+Send, Clint Medellin
+Sleep, 50
+Click, 1247, 430
+Sleep, 50
+Click, 1247, 466
+Sleep, 50
+Click, 1284, 430
+Sleep, 50
+Send, Sr. Tech
+Sleep, 50
+Click, 1456, 430
+Sleep, 50
+Send, CI
+
+Sleep, 50
+Click, 1434, 322
+Sleep, 50
+
+Click, 998, 470
+Sleep, 50
+Send, Landon Ronsonet
+Sleep, 50
+Click, 1247, 470
+Sleep, 50
+Click, 1247, 500
+Sleep, 50
+Click, 1284, 470
+Sleep, 50
+Send, Tech
+Sleep, 50
+Click, 1456, 470
+Sleep, 50
+Send, CI
+Sleep, 50
+
+Sleep, 50
+Click, 1600,779
+Sleep, 150
+
+; ent1
+MouseMove, 1470,415
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 599,250
+Sleep, 50
+MouseMove, 927,420
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,970
+Sleep, 150
+
+Click, 1600,894
+Sleep, 150
+
+; ent2
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 599,250
+Sleep, 50
+MouseMove, 927,420
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,970
+Sleep, 150
+
+Click, 1600,1070
+Sleep, 150
+
+; ent3
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+MouseClickDrag, Left, 1920, 510, 1911, 879, 50
+
+Sleep, 150
+Click, 1600,210
+Sleep, 150
+
+; ent4
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+Click, 1600,320
+Sleep, 50
+
+; ent5
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+Click, 1600,440
+Sleep, 150
+
+; ent6
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+Click, 1600,525
+Sleep, 150
+/*
+;ent7
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+Click, 1600,640
+Sleep, 150
+
+;ent8
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+Click, 1600,740
+Sleep, 50
+
+;ent9
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,960
+Sleep, 150
+
+Click, 1600,895
+Sleep, 150
+
+;ent10
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,950
+Sleep, 150
+*/
+Send, {Down 19}
+Sleep, 50
+Click, 1600,435
+Sleep, 150
+/*
+;ent11
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 599,250
+Sleep, 50
+MouseMove, 927,420
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,970
+Sleep, 150
+
+Click, 1600,630
+Sleep, 150
+
+;ent12
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 599,250
+Sleep, 50
+MouseMove, 927,420
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,970
+Sleep, 150
+
+Click, 1600,830
+Sleep, 150
+
+;ent13
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+Click, 1600,960
+Sleep, 150
+
+;ent14
+MouseMove, 1470,400
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 600,230
+Sleep, 50
+MouseMove, 927,380
+Sleep, 50
+Click, 3
+Sleep, 50
+Send, Joel Mahaffey, Clint Medellin, Landon Ronsonet
+Sleep, 50
+Click, 1456,930
+Sleep, 150
+
+
+;Click, 1600,1070
+;Sleep, 150
+
+*/
+MsgBox, 0, Process Complete.	
+ExitApp, 0

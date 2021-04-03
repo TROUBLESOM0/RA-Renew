@@ -1,0 +1,33 @@
+!u::
+
+IfWinActive, Risk - Google Chrome
+{
+MsgBox, 48, Risk is open 
+
+}
+else IfWinNotActive, Risk - Google Chrome
+{
+MsgBox, 48, Need to open RA
+Run, chrome.exe http://unisea.chouest.com/ci/unisea.nsf/#/risk/risk-assessment/my-location
+}
+else 
+{
+MsgBox, 0, Nothing ran
+}
+Sleep, 3000
+WinWaitActive, Risk - Google Chrome, , 120
+if ErrorLevel
+{
+MsgBox, Timed Out
+return
+}
+else
+{
+x = 5
+y = 10
+z := x + y
+MsgBox, 0, answer is %z%
+}
+
+
+ExitApp, 0

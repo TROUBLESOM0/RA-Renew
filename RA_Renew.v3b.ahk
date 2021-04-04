@@ -3,9 +3,13 @@
 ; Tested on W10, Asus PA248Q, Chrome 89.0.4389.90, UniSea v21.1.4
 ;
 ; v.0.3 release notes - x/xx/xx
+; more speed
+; cancel button exits program during creation of names list
 ; built functions
 ; removed read-only attribute
 ; removed RA_renew from querylist
+; removed needless windows
+; auto open now maximizes if not already
 ;
 ; v.0.2 release notes - created 3/30/21
 ; speed increased
@@ -180,7 +184,7 @@ Return  ; this stopped loop on mkDB after RA_renew
 ; this begins the mouse/clicks, this needs alot of work
 
 WinGetActiveTitle, win1
-MsgBox, 0, Active Window is:  "%win1%"
+;MsgBox, 0, Active Window is:  "%win1%"
 
 IfWinActive, Risk - Google Chrome
 {
@@ -189,8 +193,10 @@ IfWinActive, Risk - Google Chrome
 }
 else IfWinNotActive, Risk - Google Chrome
 {	Run, chrome.exe http://unisea.chouest.com/ci/unisea.nsf/#/risk/risk-assessment/my-location
+	WinWait, Risk - Google Chrome
+	WinMaximize
 	Sleep, 2000
-	MsgBox, 16, Get8Me, YOUR MUST FIRST OPEN THE RISK ASSESSMENT FORM YOU WISH TO RENEW, 20
+	MsgBox, 16, Get8Me, YOUR MUST FIRST OPEN THE RISK ASSESSMENT FORM YOU WANT TO RENEW, 20
 }
 	
 ;CoordMode, Mouse, Screen  ;why is this here?

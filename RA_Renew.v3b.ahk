@@ -94,6 +94,7 @@ global read_sr
 global read_pt
 	
 BlockInput On
+WinActivate, Risk - Google Chrome
 
 ;SetMouseDelay, 3000
 Click, 1646, 131 ;copy RA

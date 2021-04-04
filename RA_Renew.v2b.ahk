@@ -5,8 +5,8 @@
 WinGetActiveTitle, awin
 if awin != Risk - Google Chrome
 {
-MsgBox, 0, Active Window is:  "%awin%"`r`n The ""ACTIVE"" Window needs to be opened to the Risk Assessment you intend 
-
+MsgBox, 0, Active Window is:  "%awin%"`r`n The ""ACTIVE"" Window needs to be opened to the Risk Assessment you intend to renew
+}
 
 if IfWinActive, Risk - Google Chrome
 {

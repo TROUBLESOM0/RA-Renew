@@ -491,8 +491,8 @@ Click, 2385, 635
 Sleep, 310
 
 ;Send Form
-;Click, 3660, 122
-;Sleep, 1000
+Click, 3660, 122
+Sleep, 1000
 
 BlockInput Off
 
@@ -538,4 +538,5 @@ File.Close()
 FileDelete, Pre_Dive_Checklist_OLD.db
 
 MsgBox, 0, Process Complete. User will Submit.	
+
 ExitApp, 0

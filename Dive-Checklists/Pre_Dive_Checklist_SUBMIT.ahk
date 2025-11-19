@@ -537,6 +537,7 @@ File.Close()
 
 FileDelete, Pre_Dive_Checklist_OLD.db
 
-MsgBox, 0, Process Complete. User will Submit.	
+;MsgBox, 0, Process Complete. User will Submit.	
 
 ExitApp, 0
+

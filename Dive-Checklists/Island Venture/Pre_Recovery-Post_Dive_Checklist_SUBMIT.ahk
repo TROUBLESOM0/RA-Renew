@@ -1,4 +1,4 @@
-; submit Pre-Recovery Checklist in UniSea
+; submit Pre-Recovery Checklist in UniSea  (Island Venture Version)
 ; Pre_Recovery_Checklist_SUBMIT v.0.0.1
 ; Tested on W10, Asus PA248Q, Chrome 142.0.7444.60, UniSea v25.2.16 (47933)
 ;

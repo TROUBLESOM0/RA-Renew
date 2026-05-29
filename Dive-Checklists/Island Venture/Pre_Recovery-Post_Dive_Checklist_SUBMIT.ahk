@@ -85,7 +85,7 @@ FileReadLine, read_wave, Post_Dive_Checklist_OLD.db, 9
 FileReadLine, read_curdir, Post_Dive_Checklist_OLD.db, 10
 FileReadLine, read_curspd, Post_Dive_Checklist_OLD.db, 11
 
-;MsgBox, 0, Start mkDB
+;Start mkDB
 InputBox, in_date, Today Date, Date: , , , , , , , 60, %read_date%
 if ErrorLevel {
  ExitApp, 0
@@ -131,10 +131,7 @@ if ErrorLevel {
  ExitApp, 0
 }
 FileAppend, %in_date%`r%in_dive%`r%in_system%`r%in_client%`r%in_vessel%`r%in_sup%`r%in_sr%`r%in_pt%`r%in_wave%`r%in_curdir%`r%in_curspd%, Post_Dive_Checklist.db
-;MsgBox, 0, Appended to file
 FileSetAttrib, +H, Post_Dive_Checklist.db
-;MsgBox, 0, Set attribute
-;if FileExist("RA_renew.db")   ; not sure if this is even needed?? Or what is actually doing
 
 ;ExitApp, 0
  querylist()
@@ -144,7 +141,7 @@ FileSetAttrib, +H, Post_Dive_Checklist.db
 
 ; function that creates Post_Dive_Checklist.db for typed inputs. Also, pulls querylist()
 mkDB() {
-;MsgBox, 0, Start mkDB
+;Start mkDB
 InputBox, in_date, Today Date, Date: , , , , , , , 60, 01/01/2020
 if ErrorLevel {
  ExitApp, 0
@@ -190,13 +187,10 @@ if ErrorLevel {
  ExitApp, 0
 }
 FileAppend, %in_date%`r%in_dive%`r%in_system%`r%in_client%`r%in_vessel%`r%in_sup%`r%in_sr%`r%in_pt%`r%in_wave%`r%in_curdir%`r%in_curspd%, Post_Dive_Checklist.db
-;MsgBox, 0, Appended to file
 FileSetAttrib, +H, Post_Dive_Checklist.db
-;MsgBox, 0, Set attribute
-;if FileExist("RA_renew.db")   ; not sure if this is even needed?? Or what is actually doing
 
-;ExitApp, 0
  querylist()
+
 ;MsgBox, 0, End of mkDB
 }
 
@@ -216,14 +210,12 @@ global read_pt
 global read_wave
 global read_curdir
 global read_curspd
-;MsgBox, 0, Start getList inside querylist
+
 getList()
+
 MsgBox, 4, Data To Write, Date: %read_date%`n`nDive #: %read_dive%`n`nSystem: %read_system%`n`nClient: %read_client%`n`nVessel: %read_vessel%`n`nSupervisor: %read_sup%`n`nSrTech: %read_sr%`n`nPT: %read_pt%`n`nWaves: %read_wave%`n`nCurrent direction: %read_curdir%`n`nCurrent speed: %read_curspd%
 IfMsgBox, Yes
 {
-; removed to run RA_renew; Return  ; need to revisit this RETURN
-;Post_Dive()
-;MsgBox, Post Dive COmpleted backinquerylist
 Return
 }
 IfMsgBox, No
@@ -232,15 +224,14 @@ FileMove, Post_Dive_Checklist.db, Post_Dive_Checklist_OLD.db
 if ErrorLevel
  MsgBox, Failed to rename file
 
-; calls this function. This may not be right.  ; v.0.3 is calling this function after ra_renew
+
 RENEW_mkDB()
 }
 }
 
 
-; Prerecovery function, may be too long for a function
+; Prerecovery function
 Pre_Recover() {
-;MsgBox, 0, Start post_dive function
 
 global read_date
 global read_dive
@@ -255,8 +246,6 @@ global read_curdir
 global read_curspd
 
 BlockInput On
-
-;MsgBox, 0, ran global and block
 
 SetDefaultMouseSpeed, 80
 SetMouseDelay, 1000
@@ -453,9 +442,8 @@ Pre_Recover()
 ; ######### START POST DIVE #########
 ; ###################################
 
-; Postdive function, may be too long for a function
+; Postdive function
 Post_Dive() {
-;MsgBox, 0, Start post_dive function
 
 global read_date
 global read_dive
@@ -470,8 +458,6 @@ global read_curdir
 global read_curspd
 
 BlockInput On
-
-;MsgBox, 0, ran global and block
 
 SetDefaultMouseSpeed, 80
 SetMouseDelay, 1000
@@ -671,5 +657,4 @@ File.Close()
 
 FileDelete, Post_Dive_Checklist_OLD.db
 
-;MsgBox, 0, Process Complete. User will submit.
 ExitApp, 0

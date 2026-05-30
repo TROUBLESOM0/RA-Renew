@@ -497,14 +497,19 @@ Sleep, 200
 Click, 1940, 642
 Sleep, 200
 Click, 1750, 712
-Sleep, 310
-
-ExitApp, 0
-
 
 ;Send Form
+Sleep, 310
 Click, 2380, 160
 Sleep, 1000
+; ###########################
+; Move mouse and let user send
+;BlockInput Off
+;MouseMove, 2380, 160
+;Keywait, LButton, D   ;await lt mouse click
+;Click
+;BlockInput On
+; ############################
 
 BlockInput Off
 

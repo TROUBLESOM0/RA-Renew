@@ -401,8 +401,16 @@ Sleep, 200
 Click, 1940, 715
 
 ;Submit
-Sleep, 200
+Sleep, 300
 Click, 2380, 160
+; ###########################
+; Move mouse and let user send
+;BlockInput Off
+;MouseMove, 2380, 160
+;Keywait, LButton, D   ;await lt mouse click
+;Click
+;BlockInput On
+; ############################
 
 BlockInput Off
 
@@ -649,7 +657,16 @@ Sleep, 300
 Click, 700, 760
 
 ;Send Form
+Sleep, 300
 Click, 2380, 160
+; ###########################
+; Move mouse and let user send
+;BlockInput Off
+;MouseMove, 2380, 160
+;Keywait, LButton, D   ;await lt mouse click
+;Click
+;BlockInput On
+; ############################
 
 BlockInput Off
 

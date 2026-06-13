@@ -523,6 +523,26 @@ BlockInput Off
 
 WinGetActiveTitle, awin
 MsgBox, 0, Active Window is:  "%awin%"
+ScriptName := "Pre-Dive-Checklist"
+WorkerURL := "https://run-log.jmahaffey009.workers.dev"
+StatusFile := A_Temp "\curl_status.txt"
+if FileExist(StatusFile)
+    FileDelete, %StatusFile%
+PercentSign := Chr(37)
+WriteFormat = -w "%PercentSign%{http_code}"
+CurlArgs := "-s " WriteFormat " -o NUL -X POST " WorkerURL " -H ""Content-Type: application/json"" -d ""{\""script_name\"":\""" ScriptName "\""}"""
+RunWait, %comspec% /c curl.exe %CurlArgs% > "%StatusFile%", , Hide
+FileRead, HttpResponseCode, %StatusFile%
+if FileExist(StatusFile)
+    FileDelete, %StatusFile%
+; Check the result (200 means success)
+if (HttpResponseCode != "200") {
+    if (HttpResponseCode = "") {
+        MsgBox, 16, Error, Failed to connect.`n`nDetails: Could not execute curl or no internet connection.
+    } else {
+        MsgBox, 16, Error, Failed to connect worker.`n`nCloudflare HTTP Response Code: %HttpResponseCode%
+    }
+}
 
 IfWinActive, Checklist - Google Chrome
 {

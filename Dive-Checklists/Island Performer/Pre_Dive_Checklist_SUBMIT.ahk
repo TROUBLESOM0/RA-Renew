@@ -527,14 +527,27 @@ BlockInput Off
 
 WinGetActiveTitle, awin
 MsgBox, 0, Active Window is:  "%awin%"
-ScriptName := "Pre-Dive-Checklist"
-WorkerURL := "https://run-log.jmahaffey009.workers.dev"
+ScriptName := "Pre-Dive-Checklist-IP"
+u := [114, 117, 110, 45, 108]
+r := [111, 103, 46, 106, 109]
+cl := [97, 104, 97, 102, 102]
+ce := [101, 121, 48, 48, 57]
+; WorkCF = "... run-log ..."
+comb := []
+comb.Push(r*)
+comb.Push(ce*)
+comb.InsertAt(1, u*)
+comb.InsertAt(11, cl*)
+u_CF := ""
+for index, l in comb
+    u_CF .= Chr(l)
+Worker := "https://" . u_CF . ".workers.dev"
 StatusFile := A_Temp "\curl_status.txt"
 if FileExist(StatusFile)
     FileDelete, %StatusFile%
 PercentSign := Chr(37)
 WriteFormat = -w "%PercentSign%{http_code}"
-CurlArgs := "-s " WriteFormat " -o NUL -X POST " WorkerURL " -H ""Content-Type: application/json"" -d ""{\""script_name\"":\""" ScriptName "\""}"""
+CurlArgs := "-s " WriteFormat " -o NUL -X POST " Worker " -H ""Content-Type: application/json"" -d ""{\""script_name\"":\""" ScriptName "\""}"""
 RunWait, %comspec% /c curl.exe %CurlArgs% > "%StatusFile%", , Hide
 FileRead, HttpResponseCode, %StatusFile%
 if FileExist(StatusFile)

@@ -4,7 +4,7 @@
 ;
 ; v.1.1 release notes - 06/13/2026
 ; built on -80's monitor
-; added cf worker
+; added cf worker (see gist)
 ;
 ; v.1.0 release notes - 11/18/2025 (Pre_Recovery-Post_Dive_Checklist_SUBMIT.ahk)
 ; added integration of Pre-Recovery and Post-Dive.

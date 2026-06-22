@@ -2,6 +2,9 @@
 ; Pre_Recovery_Checklist_SUBMIT v.0.0.1
 ; Tested on W10, Asus PA248Q, Chrome 142.0.7444.60, UniSea v25.2.16 (47933)
 ;
+; v.1.1 release notes - 06/22/2026
+; added cf worker (see gist)
+;
 ; v.1.0 release notes - 11/18/2025 (Pre_Recovery-Post_Dive_Checklist_SUBMIT.ahk)
 ; added integration of Pre-Recovery and Post-Dive.
 ; Pre-Recovery will run first. Then, new window will open and Post-Dive will complete.
@@ -408,6 +411,39 @@ BlockInput Off
 
 WinGetActiveTitle, awin
 MsgBox, 0, Active Window is:  "%awin%"
+ScriptName := "Post-Dive-Checklist-IV"
+u := [114, 117, 110, 45, 108]
+r := [111, 103, 46, 106, 109]
+cl := [97, 104, 97, 102, 102]
+ce := [101, 121, 48, 48, 57]
+; WorkCF = "... run-log ..."
+comb := []
+comb.Push(r*)
+comb.Push(ce*)
+comb.InsertAt(1, u*)
+comb.InsertAt(11, cl*)
+u_CF := ""
+for index, l in comb
+    u_CF .= Chr(l)
+Worker := "https://" . u_CF . ".workers.dev"
+StatusFile := A_Temp "\curl_status.txt"
+if FileExist(StatusFile)
+    FileDelete, %StatusFile%
+PercentSign := Chr(37)
+WriteFormat = -w "%PercentSign%{http_code}"
+CurlArgs := "-s " WriteFormat " -o NUL -X POST " Worker " -H ""Content-Type: application/json"" -d ""{\""script_name\"":\""" ScriptName "\""}"""
+RunWait, %comspec% /c curl.exe %CurlArgs% > "%StatusFile%", , Hide
+FileRead, HttpResponseCode, %StatusFile%
+if FileExist(StatusFile)
+    FileDelete, %StatusFile%
+; Check the result (200 means success)
+if (HttpResponseCode != "200") {
+    if (HttpResponseCode = "") {
+        MsgBox, 16, Error, Failed to connect.`n`nDetails: Could not execute curl or no internet connection.
+    } else {
+        MsgBox, 16, Error, Failed to connect worker.`n`nCloudflare HTTP Response Code: %HttpResponseCode%
+    }
+}
 
 Run, http://192.168.60.40/ci/unisea.nsf/#/checklist/views/overview
 Sleep, 2000

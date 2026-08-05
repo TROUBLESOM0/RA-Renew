@@ -1,6 +1,9 @@
 ; submit Pre-Recovery Checklist in UniSea  (Island Venture Version)
 ; Pre_Recovery_Checklist_SUBMIT v.0.0.1
-; Tested on W10, Asus PA248Q, Chrome 142.0.7444.60, UniSea v25.2.16 (47933)
+; Tested on W10, Asus PA248Q, Chrome 150.0.7871.187, UniSea v25.6.10 (54638)
+;
+; v.1.2 release notes - 08/04/2026
+; updated for newer Unisea version (see above)
 ;
 ; v.1.1 release notes - 06/22/2026
 ; added cf worker (see gist)
@@ -254,17 +257,17 @@ SetDefaultMouseSpeed, 80
 SetMouseDelay, 1000
 
 ;Start Form
-Click, 387, 198    ;form
+Click, 387, 228    ;form
 Sleep, 500
-Click, 2033, 435   ;open list
+Click, 2033, 465   ;open list
 Sleep, 500
-Click, 2044, 478
+Click, 2044, 508
 Sleep, 500
-Click, 2055, 515
+Click, 2055, 545
 Sleep, 500
-Click, 2229, 841   ;start prerecovery
+Click, 2229, 871   ;start prerecovery
 Sleep, 500
-Click, 1566, 287   ;title
+Click, 1520, 373   ;title
 Sleep, 500
 Send, ^a
 Sleep, 500
@@ -276,126 +279,126 @@ Send, Dive {#}
 Sleep, 500
 Send, %read_dive%
 Sleep, 200
-Click, 1869, 555    ;system
+Click, 1800, 630    ;system
 Sleep, 200
 Send, %read_system%
 Sleep, 200
-Click, 1843, 590
+Click, 1800, 670
 Sleep, 200
-Click, 2374, 558    ;vessel
+Click, 2374, 626    ;vessel
 Sleep, 200
 Send, %read_vessel%
 Sleep, 200
-Click, 2388, 594
+Click, 2388, 667
 Sleep, 200
-Click, 2355, 595     ;dive
+Click, 2355, 667     ;dive
 Sleep, 200
 Send, %read_dive%
 Sleep, 200
-Click, 2352, 630     ;wave
+Click, 2352, 710     ;wave
 Sleep, 200
 Send, %read_wave%
 Sleep, 200
-Click, 2344, 668     ;cur-dir
+Click, 2344, 740     ;cur-dir
 Sleep, 200
 Send, %read_curdir%
 Sleep, 200
-Click, 1817, 630     ;client
+Click, 1817, 710     ;client
 Sleep, 200
 Send, %read_client%
 Sleep, 200
-Click, 1783, 665     ;cur-spd
+Click, 1783, 740     ;cur-spd
 Sleep, 200
 Send, %read_curspd%
 
 ;ROV
 Sleep, 310
-Click, 1406, 472
+Click, 1406, 555
 Sleep, 200
-Click, 2139, 489
+Click, 2139, 570
 Sleep, 200
-Click, 2139, 524
+Click, 2139, 600
 Sleep, 200
-Click, 2139, 559
+Click, 2139, 640
 
 ;TMS
 Sleep, 310
-Click, 1366, 514
+Click, 1366, 610
 Sleep, 200
-Click, 2139, 486
+Click, 2139, 565
 Sleep, 200
-Click, 2139, 524
+Click, 2139, 600
 
 ;Handling System
 Sleep, 310
-Click, 1380, 563
+Click, 1380, 640
 Sleep, 200
-Click, 2370, 487
+Click, 2370, 570
 Sleep, 200
-Click, 2140, 524
+Click, 2140, 604
 Sleep, 200
-Click, 2140, 560
+Click, 2140, 640
 Sleep, 200
-Click, 2140, 596
+Click, 2140, 676
 Sleep, 200
-Click, 2140, 633
+Click, 2140, 713
 Sleep, 200
-Click, 2140, 669
+Click, 2140, 749
 Sleep, 200
-Click, 2140, 704
+Click, 2140, 784
 Sleep, 200
-Click, 2140, 740
+Click, 2140, 813
 Sleep, 200
-Click, 2140, 776
+Click, 2140, 847
 Sleep, 200
-Click, 2140, 811
+Click, 2140, 884
 
 ;Tooling
 Sleep, 310
-Click, 1353, 606
+Click, 1380, 680
 Sleep, 200
-Click, 2140, 487
+Click, 2140, 570
 Sleep, 200
-Click, 2140, 524
+Click, 2140, 600
 
 ;Survey
 Sleep, 310
-Click, 1373, 649
+Click, 1380, 730
 Sleep, 200
-Click, 2140, 488
+Click, 2140, 570
 
 ;Personnel
 Sleep, 310
-Click, 1376, 728
+Click, 1380, 800
 Sleep, 200
-Click, 1790, 488    ;super
+Click, 1790, 570    ;super
 Sleep, 200
 Send, %read_sup%
 Sleep, 200
-Click, 2581, 489
+Click, 2580, 570
 Sleep, 200
-Click, 2403, 524
+Click, 2580, 600
 Sleep, 200
-Click, 1811, 527    ;srtech
+Click, 1811, 605    ;srtech
 Sleep, 200
 Send, %read_sr%
 Sleep, 200
-Click, 2577, 526
+Click, 2580, 605
 Sleep, 200
-Click, 2378, 635
+Click, 2580, 710
 Sleep, 200
-Click, 1818, 564     ;pt
+Click, 1818, 645     ;pt
 Sleep, 200
 Send, %read_pt%
 Sleep, 200
-Click, 2578, 565
+Click, 2580, 645
 Sleep, 200
-Click, 2392, 635
+Click, 2580, 720
 
 
 ;Submit
 Sleep, 200
-Click, 3661, 122
+Click, 3660, 160
 
 BlockInput Off
 
@@ -472,6 +475,7 @@ if !FileExist("Post_Dive_Checklist.db") {
 else querylist()
 
 Pre_Recover()
+
 ; post-dive continued below
 
 ; ###################################
@@ -499,17 +503,17 @@ SetDefaultMouseSpeed, 80
 SetMouseDelay, 1000
 
 ;Start Form
-Click, 387, 198    ;form
+Click, 387, 228    ;form
 Sleep, 500
-Click, 2033, 435   ;open list
+Click, 2033, 465   ;open list
 Sleep, 500
-Click, 2044, 478
+Click, 2050, 508
 Sleep, 500
-Click, 2055, 515
+Click, 2050, 545
 Sleep, 500
-Click, 2066, 634   ;start postdive
+Click, 2050, 670   ;start postdive
 Sleep, 500
-Click, 1517, 288   ;title
+Click, 1520, 375   ;title
 Sleep, 500
 Send, ^a
 Sleep, 500
@@ -523,156 +527,152 @@ Send, %read_dive%
 Sleep, 500
 
 ;System
-Click, 1844, 488
+Click, 1800, 570
 Sleep, 300
 Send, %read_system%
 Sleep, 200
-Click, 1849, 522
+Click, 1800, 600
 
 ;Client
 Sleep, 300
-Click, 1808, 561
+Click, 1800, 640
 Sleep, 200
 Send, %read_client%
 
 ;Vessel
 Sleep, 300
-Click, 2366, 489
+Click, 2580, 570
 Sleep, 200
 Send, %read_vessel%
 Sleep, 200
-Click, 2384, 523
+Click, 2500, 600
 
 ;Dive
 Sleep, 300
-Click, 2366, 524
+Click, 2580, 600
 Sleep, 200
 Send, %read_dive%
 
 ;Super
 Sleep, 300
-Click, 2361, 561
+Click, 2580, 640
 Sleep, 200
 Send, %read_sup%
 
 ;Control Consoles
 Sleep, 300
-Click, 2554, 615
+Click, 1400, 560
 Sleep, 200
-Click, 2136, 487
+Click, 2140, 570
 Sleep, 200
-Click, 2138, 523
+Click, 2140, 605
 Sleep, 200
-Click, 2336, 559
+Click, 2340, 640
 Sleep, 200
-Click, 2148, 582
+Click, 2340, 660
 Sleep, 200
 Send, "Spare Not Being Used"
 Sleep, 200
-Click, 2139, 634
+Click, 2140, 715
 Sleep, 200
-Click, 2137, 670
+Click, 2140, 750
 
 ;TMS
 Sleep, 300
-Click, 2535, 726
+Click, 1400, 600
 Sleep, 200
-Click, 2139, 489
+Click, 2140, 570
 Sleep, 200
-Click, 2139, 524
+Click, 2140, 605
 Sleep, 200
-Click, 2139, 559
+Click, 2140, 640
 Sleep, 200
-Click, 2139, 596
+Click, 2140, 675
 Sleep, 200
-Click, 2139, 632
+Click, 2140, 710
 Sleep, 200
-Click, 2139, 668
+Click, 2140, 745
 Sleep, 200
-Click, 2139, 704
+Click, 2140, 780
 Sleep, 200
-Click, 2139, 740
+Click, 2140, 815
 
 ;ROV
 Sleep, 300
-Click, 1357, 559
+Click, 1400, 640
 Sleep, 200
-Click, 2139, 487
+Click, 2140, 570
 Sleep, 200
-Click, 2139, 523
+Click, 2140, 605
 Sleep, 200
-Click, 2139, 559
+Click, 2140, 640
 Sleep, 200
-Click, 2139, 596
+Click, 2140, 675
 Sleep, 200
-Click, 2139, 632
+Click, 2140, 710
 Sleep, 200
-Click, 2139, 668
+Click, 2140, 745
 Sleep, 200
-Click, 2139, 704
+Click, 2140, 780
 Sleep, 200
-Click, 2139, 740
+Click, 2140, 815
 
 ;Handling System
 Sleep, 300
-Click, 1357, 602
+Click, 1357, 680
 Sleep, 200
-Click, 2139, 487
+Click, 2140, 570
 Sleep, 200
-Click, 2139, 524
+Click, 2140, 605
 Sleep, 200
-Click, 2139, 559
+Click, 2140, 640
 Sleep, 200
-Click, 2337, 596
+Click, 2337, 675
 Sleep, 200
-Click, 2230, 618
-Sleep, 200
-Send, "Not Applicable"
-Sleep, 200
-Click, 2337, 671
-Sleep, 200
-Click, 2220, 698
+Click, 2337, 690
 Sleep, 200
 Send, "Not Applicable"
 Sleep, 200
-Click, 2337, 747
+Click, 2337, 750
 Sleep, 200
-Click, 2230, 773
+Click, 2220, 770
+Sleep, 200
+Send, "Not Applicable"
+Sleep, 200
+Click, 2330, 820
+Sleep, 200
+Click, 2330, 840
 Sleep, 200
 Send, "Not Applicable"
 Sleep, 200
-Click, 2140, 823
+Click, 2130, 900
 Sleep, 200
-Click, 2138, 859
+Click, 2130, 935
 Sleep, 200
-Click, 2140, 895
+Click, 2130, 970
 Sleep, 200
-Click, 2338, 933
-Sleep, 200
-Click, 2253, 956
-Sleep, 200
-Send, "Not Applicable"
+Click, 2130, 1005
 
 ;Tooling
 Sleep, 300
-Click, 1357, 641
+Click, 1357, 720
 Sleep, 200
-Click, 2139, 489
+Click, 2140, 570
 Sleep, 200
-Click, 2139, 524
+Click, 2140, 605
 Sleep, 200
-Click, 2139, 559
+Click, 2140, 640
 Sleep, 200
-Click, 2139, 596
+Click, 2140, 675
 Sleep, 200
-Click, 2139, 632
+Click, 2140, 710
 
 ;System Specifics
 Sleep, 300
-Click, 2550, 682
+Click, 1357, 760
 
 ;Send Form
-Click, 3660, 122
+Click, 3660, 160
 
 BlockInput Off
 

@@ -514,7 +514,7 @@ BlockInput Off
 !p::
 
 WinGetActiveTitle, awin
-MsgBox, 48, Active Window is:  "%awin%", Island Venture Widescreen ONLY!!!`nThis completes a LPre-Dive Checklist.`nJust fill out the following parameters.`n`nYou can leave this screen to get info,`n Just ensure to return to Unisea page before continuing this app.
+MsgBox, 48, Active Window is:  "%awin%", Island Venture Widescreen ONLY!!!`nThis completes a `nPre-Dive Checklist.`nJust fill out the following parameters.`n`nYou can leave this screen to get info,`n Just ensure to return to Unisea page before continuing this app.
 ScriptName := "Pre-Dive-Checklist-IV"
 u := [114, 117, 110, 45, 108]
 r := [111, 103, 46, 106, 109]

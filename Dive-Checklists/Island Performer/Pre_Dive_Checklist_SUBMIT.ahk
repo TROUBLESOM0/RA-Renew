@@ -2,6 +2,11 @@
 ; Pre_Dive_Checklist_SUBMIT v1.0
 ; Tested on W11, Viewsonic VX3218C-2K, Chrome 147.0.7727.138, UniSea v25.6.10 (54638)
 ;
+; v1.2 release notes - 8/10/2026
+; revised windows, added user instructions
+;
+; v1.1 release notes - No Change
+;
 ; v1.0 release notes - 06/13/2026
 ; built on -80's monitor
 ; added cf worker

@@ -11,7 +11,7 @@
 ; built on -80's monitor
 ; added cf worker
 ;
-; v.0.1 release notes - 11/10/2025
+; v0.1 release notes - 11/10/2025
 ; built functions
 ; added persistent variables
 

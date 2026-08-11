@@ -2,24 +2,23 @@
 ; Pre_Recovery_Checklist_SUBMIT v.1.1
 ; Tested on W11, Viewsonic VX3218C-2K, Chrome 147.0.7727.138, UniSea v25.6.10 (54638)
 ;
-; v.1.1 release notes - 06/13/2026
+; v1.2 release notes - 8/10/2026
+; revised windows, added user instructions
+;
+; v1.1 release notes - 06/13/2026
 ; built on -80's monitor
 ; added cf worker (see gist)
 ;
-; v.1.0 release notes - 11/18/2025 (Pre_Recovery-Post_Dive_Checklist_SUBMIT.ahk)
+; v1.0 release notes - 11/18/2025
 ; added integration of Pre-Recovery and Post-Dive.
 ; Pre-Recovery will run first. Then, new window will open and Post-Dive will complete.
 ; Added automatic submitting.
 ;
-; v.0.2 release notes - 11/15/2025 (Post_Dive_Checklist_SUBMIT.ahk)
+; v.0.2 release notes - 11/15/2025
 ; removed integration with Pre-Recovery. (transition issues)
 ; added persistent variables.
 ;
-; v.0.1 release notes - 11/10/2025 (Post_Dive_Checklist_SUBMIT.ahk)
-; built functions.
-; added integration with Pre-Recovery.
-;
-; v.0.1 release notes - 11/10/2025 (Pre_Recovery_Checklist_SUBMIT.ahk)
+; v.0.1 release notes - 11/10/2025
 ; built functions.
 ; added persistent variables.
 

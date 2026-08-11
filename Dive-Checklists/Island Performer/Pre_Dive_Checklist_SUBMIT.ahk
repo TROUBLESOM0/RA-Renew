@@ -77,47 +77,47 @@ FileReadLine, read_curdir, Pre_Dive_Checklist_OLD.db, 10
 FileReadLine, read_curspd, Pre_Dive_Checklist_OLD.db, 11
 
 ;MsgBox, 0, Start mkDB
-InputBox, in_date, Today Date, Date: , , , , , , , 60, %read_date%
+InputBox, in_date, Pre-Dive, Date: , , , , , , , 60, %read_date%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_dive, Dive Number, Dive: , , , , , , , 60, %read_dive%
+InputBox, in_dive, Pre-Dive, Dive: , , , , , , , 60, %read_dive%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_system, System, System Name(UHD-123): , , , , , , , 60, %read_system%
+InputBox, in_system, Pre-Dive, System Name(UHD-123): , , , , , , , 60, %read_system%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_client, Client, Client Name: , , , , , , , 60, %read_client%
+InputBox, in_client, Pre-Dive, Client Name: , , , , , , , 60, %read_client%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_vessel, Vessel, Vessel Name: , , , , , , , 60, %read_vessel%
+InputBox, in_vessel, Pre-Dive, Vessel Name: , , , , , , , 60, %read_vessel%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_sup, Supervisor, Supervisor Name: , , , , , , , 60, %read_sup%
+InputBox, in_sup, Pre-Dive, Supervisor Name: , , , , , , , 60, %read_sup%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_sr, Sr Technician, Sr Tech Name: , , , , , , , 60, %read_sr%
+InputBox, in_sr, Pre-Dive, Sr Tech Name: , , , , , , , 60, %read_sr%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_pt, Pilot Technician, PT Name: , , , , , , , 60, %read_pt%
+InputBox, in_pt, Pre-Dive, PT Name: , , , , , , , 60, %read_pt%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_wave, Waves, Wave Height: , , , , , , , 60, %read_wave%
+InputBox, in_wave, Pre-Dive, Wave Height: , , , , , , , 60, %read_wave%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_curdir, Current Direction, Current Direction: , , , , , , , 60, %read_curdir%
+InputBox, in_curdir, Pre-Dive, Current Direction: , , , , , , , 60, %read_curdir%
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_curspd, Current Speed, Current Speed: , , , , , , , 60, %read_curspd%
+InputBox, in_curspd, Pre-Dive, Current Speed: , , , , , , , 60, %read_curspd%
 if ErrorLevel {
  ExitApp, 0
 }
@@ -135,47 +135,47 @@ FileSetAttrib, +H, Pre_Dive_Checklist.db
 ; function that creates Pre_Dive_Checklist.db for typed inputs. Also, pulls querylist()
 mkDB() {
 ;MsgBox, 0, Start mkDB
-InputBox, in_date, Today Date, Date: , , , , , , , 60, 01/01/2020
+InputBox, in_date, Pre-Dive, Date: , , , , , , , 60, 01/01/2020
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_dive, Dive Number, Dive: , , , , , , , 60, 1
+InputBox, in_dive, Pre-Dive, Dive: , , , , , , , 60, 1
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_system, System, System Name(UHD-123): , , , , , , , 60, UHD-123
+InputBox, in_system, Pre-Dive, System Name(UHD-123): , , , , , , , 60, UHD-123
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_client, Client, Client Name: , , , , , , , 60, BP
+InputBox, in_client, Pre-Dive, Client Name: , , , , , , , 60, BP
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_vessel, Vessel, Vessel Name: , , , , , , , 60, Island Venture
+InputBox, in_vessel, Pre-Dive, Vessel Name: , , , , , , , 60, Island Venture
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_sup, Supervisor, Supervisor Name: , , , , , , , 60, I'm Batman
+InputBox, in_sup, Pre-Dive, Supervisor Name: , , , , , , , 60, I'm Batman
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_sr, Sr Technician, Sr Tech Name: , , , , , , , 60, Wanna-Be Batman
+InputBox, in_sr, Pre-Dive, Sr Tech Name: , , , , , , , 60, Wanna-Be Batman
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_pt, Pilot Technician, PT Name: , , , , , , , 60, Not Even Close
+InputBox, in_pt, Pre-Dive, PT Name: , , , , , , , 60, Not Even Close
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_wave, Waves, Wave Height: , , , , , , , 60, 60ft or 20m
+InputBox, in_wave, Pre-Dive, Wave Height: , , , , , , , 60, 60ft or 20m
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_curdir, Current Direction, Current Direction: , , , , , , , 60, NE or 45
+InputBox, in_curdir, Pre-Dive, Current Direction: , , , , , , , 60, NE or 45
 if ErrorLevel {
  ExitApp, 0
 }
-InputBox, in_curspd, Current Speed, Current Speed: , , , , , , , 60, 1
+InputBox, in_curspd, Pre-Dive, Current Speed: , , , , , , , 60, 1
 if ErrorLevel {
  ExitApp, 0
 }
@@ -526,7 +526,7 @@ BlockInput Off
 !p::
 
 WinGetActiveTitle, awin
-MsgBox, 0, Active Window is:  "%awin%"
+MsgBox, 48, Active Window is:  "%awin%", Island Performer ONLY!!!`nThis completes a `nPre-Dive Checklist.`nJust fill out the following parameters.`n`nYou can leave this screen to get info,`n Just ensure to return to Unisea page before continuing this app.
 ScriptName := "Pre-Dive-Checklist-IP"
 u := [114, 117, 110, 45, 108]
 r := [111, 103, 46, 106, 109]
